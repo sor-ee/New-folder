@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/return" method="post">
+    <input type="text" name="ID" placeholder="รหัสนักศึกษา" required>
+    <h2 align = 'center'><button class="button">ตกลง</button></h2>
+    </form>
+    <% if(data == "null"){ %>
+        <p>ไม่มีข้อมูล</p>
+    <% } %>
+    <% if(data != "null"){ %>
+    <form method="post" action="/return/delete<%= data._id%>">
+            <%= data.product %><br>
+            <%= data.borrowDate %><br>
+            <%= data.returnDate %><br>
+            <%= data.studentID %><br>
+            <button class="button"><a href="/home">ยกเลิก</button></a>
+            <button type="submit"> ตกลง</button>   
+    </form>
+    <% } %>
+    <!--<script src="javascripts/return.js" type="module"></script>-->
+</body>
+</html>

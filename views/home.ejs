@@ -1,0 +1,76 @@
+
+<head>
+    <title>Borrow Return</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/home.css"
+  </head>
+  
+  <body class="theme-light">
+    <div>
+    <label>
+      <input type="checkbox" />
+      <span class="check"></span>
+    </label>
+  </div>
+   
+    <div id="heading">
+     
+
+        <button id="submit" type="submit" value="Submit New User">
+        </button>
+    
+
+      <div class="top-text">
+        <h1 class="headerShop">Borrow Return</h1>
+        <p class="headertext">ยืม-คืนอุปกรณ์ไอที</p>
+        <img
+          class="img-topic"
+          src="./images/santa.png"
+          alt="santa"
+        />
+        <img
+          class="img-train"
+          src="./images/train.png"
+          alt="train"
+        />
+      </div>
+      <div class="changeColorButton">
+        <button class="colorBT" id="colorBT"></button>
+        <!-- <input type="color" id="colorID" > -->
+      </div>
+      <p id="Userid"></p>
+
+      <div id="divCart">
+        <img src="./images/cart.png" id="iconCart" />
+        <p id="cart"></p>
+        <img src="./images/bin.png" id="iconRemove" />
+      </div>
+
+      <div id="divSearch">
+        <img src="./images/.png" id="iconSearch" />
+        <button id="searchButton">SEARCH</button>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="shopping">Shopping List</p>
+        <p id="totalPrice"></p>
+        <div class="cart-list"></div>
+      </div>
+    </div>
+
+    <form action="/return" method="get">
+      <btn><input type="submit" value = "hello"></btn>
+    </form>
+
+    <div id="products">
+      <script src="src/script.js" type="module"></script>
+    </div>
+  </body>
+</html>
