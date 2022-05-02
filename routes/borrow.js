@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const db = require('monk')(process.env.mongo_url ||'localhost:27017/mydb')
+const db = require('monk')(process.env.mongo_url ||'localhost:27017/admin')
 const { check , validationResult, Result } = require('express-validator');
 /* GET home page. */
 require('dotenv').config()
