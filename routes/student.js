@@ -5,15 +5,15 @@ const { check , validationResult } = require('express-validator');
 /* GET home page. */
 require('dotenv').config()
 router.get('/', function(req, res, next) {
-  res.render('return',{data:"null"});
+  res.render('student',{data:"null"});
 });
 
 router.post('/', [
   ], function(req,res,next) { 
     const answer = validationResult(req);
     if(!answer.isEmpty()) {
-      res.location('/borrow');
-      res.redirect('/borrow');
+      res.location('/student');
+      res.redirect('/student');
     }
     else{
       var ct=db.get('borrow')
@@ -26,9 +26,9 @@ router.post('/', [
          } }).then(result => {
           console.log(result)
           if(result == null){
-            res.render('return', {data:"null"});
+            res.render('student', {data:"null"});
           }else{
-            res.render('return', {data:result});
+            res.render('student', {data:result});
           }
           
          })
@@ -43,8 +43,8 @@ router.get('/delete', function(req, res, next) {
 router.post('/delete(:_id)', function(req, res, next) {
   var ct=db.get('borrow')
   ct.findOneAndDelete({_id: req.params._id})
-  res.location('/home');
-  res.redirect('/home');
+  res.location('/student');
+  res.redirect('/student');
 });
 
 module.exports = router;

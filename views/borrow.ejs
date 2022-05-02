@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
-    <link rel="stylesheet" href="stylesheets/ex.css"
+    <title>borrow</title>
+    <link rel="stylesheet" href="stylesheets/ex.css">
+
 </head>
 <body bgcolor="#E24747">
+    <%- include styleborrow%>
     <div class="wallpaper">
         <div class="inner_position_bottom">
             <div class="holder_wrap_img">
-            <h1 class="text">รายละเอียดการยืม</h1>
+            <!-- <h1 class="text">รายละเอียดการยืม</h1> -->
             </div>
-    <img src="images/Rectangle 18.png">
+    <!-- <img src="images/Rectangle 18.png"> -->
     </div>
     </div>
     <br><br>
@@ -23,8 +25,10 @@
     <div class="holder_wrap_img1">
     <div class="inner_position_bottom1">
     <br><br>
-    <h1 align = 'center'>&nbsp; Panasonic GM1</h1>
+     <h1 align = 'center'>&nbsp; <%= data.name%></h1>
     <form action="/borrow" method="POST">
+        <br><br><br><h2 align = 'center'><label for="fname">ชื่อสินค้าที่ยืม </label></align>
+            <input type="text" id="fname" name="product" ></h2>
     <br><br><br><h2 align = 'center'><label for="fname">วันที่ยืม </label></align>
     <input type="date" id="fname" name="borrow" ></h2>
 
@@ -36,7 +40,7 @@
    
     <br><br><br><br><h2 align = 'center'><button class="button">ตกลง</button> &nbsp; &nbsp; &nbsp; &nbsp;
     <button class="button"><a href="/home">ยกเลิก</button></a></h2>
-
+    
     </div>
     <img src="images/123.png">
     </form>

@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const db = require('monk')('localhost:27017/mydb')
+const db = require('monk')(process.env.mongo_url ||'localhost:27017/mydb')
 const { check , validationResult } = require('express-validator');
 /* GET home page. */
+require('dotenv').config()
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -23,12 +24,12 @@ router.post('/', [
         res.redirect('/');
     }
       else if (req.body.pass=="1234"){
-        res.location('/borrow');
-        res.redirect('/borrow');
-      }
-      else {
         res.location('/home');
         res.redirect('/home');
+      }
+      else {
+        res.location('/student');
+        res.redirect('/student');
     }
   });
   }

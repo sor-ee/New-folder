@@ -12,6 +12,9 @@ body {
 .theme-light {
   background: linear-gradient(36deg, #f1a68a 40%, #e24747 98%);
 }
+.theme-dark {
+  background-color: #384877;
+}
 
 .top-text {
   position: static;
@@ -26,7 +29,7 @@ body {
 
 .headerShop {
   font-size: 60px;
-
+ 
 }
 
 .headertext {
@@ -50,7 +53,7 @@ body {
     top: 70px;
   }
   100% {
-    left: 10px;
+    left: 0px;
     top: 0px;
   }
 }
@@ -61,8 +64,7 @@ body {
   width: 60%;
   left: 0px;
   padding-left: -100%;
-  margin-top: -18.7%;
-  
+  margin-top: -23.7%;
 }
 
 .img-train {
@@ -90,15 +92,16 @@ body {
   padding: 0px 100px 0px 200px;
   font-family: "Dongle", sans-serif;
 }
-#k3
-#k2,
-#k1,
-#n3,
-#n2,
-#n1{
+
+#c001,
+#c002,
+#c003,
+#c004,
+#c005,
+#c006 {
   position: static;
   float: left;
-  margin: 25px;
+  margin: 20px;
   padding: 25px;
   width: 200px;
   height: 350px;
@@ -109,12 +112,12 @@ body {
   line-height: 15px;
 }
 
-#n1:hover,
-#n2:hover,
-#n3:hover,
-#k1:hover,
-#k2:hover,
-#k3:hover {
+#c001:hover,
+#c002:hover,
+#c003:hover,
+#c004:hover,
+#c005:hover,
+#c006:hover{
   background-color: #74312e;
   color: white;
   /* border: 0px solid white; */
@@ -255,7 +258,8 @@ img {
 #remove1,
 #remove2,
 #remove3,
-#remove4 {
+#remove4,
+#remove5 {
   margin-left: 50px;
   float: right;
   display: inline-block;
@@ -338,6 +342,10 @@ input[type="checkbox"]:checked ~ .check:after {
 }
 
 
+
+
+
+
 #textUser {
   font-weight: bold;
 }
@@ -369,14 +377,52 @@ input[type="checkbox"]:checked ~ .check:after {
   
 }
 
-.music {
-  position: fixed;
-  top: 100px;
-  right: 30px;
-  width: 250px;
-  height: 260px;
-  background-color: #f1f3f4;
-  box-shadow: 0 50px 80px rgba(0,0,0,0.25);
-  border-radius: 0px;
-}
 
+.jingle {
+   width: 250px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #879288;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  right: 100px;
+  margin-left: 1700px;
+}
+.button:active {
+  background-color: #879288;
+  box-shadow: 0 5px #999;
+  transform: translateY(4px);
+}
+.button:hover {background-color: #000000
+}
+.button1 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #879288;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 240px;
+}
+.button1:active {
+  background-color: #879288;
+  box-shadow: 0 5px #999;
+  transform: translateY(4px);
+}
+.button1:hover {background-color: #000000
+}
